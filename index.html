@@ -1,4 +1,18 @@
 <!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Kuis Suara</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="wrap">
 
   <!-- ========== SCREEN SETUP ========== -->
   <div id="screen-setup">
@@ -7,79 +21,159 @@
 
     <div class="card">
       <h3>📋 Pilih Set Soal</h3>
+
       <select id="pilihSheet" onchange="gantiSheet()">
         <option value="Uji">Uji (dari Spreadsheet)</option>
         <option value="Uji2">Uji2 (dari Spreadsheet)</option>
         <option value="lokal">Soal Lokal (Edit Manual)</option>
       </select>
+
       <p id="status-sheet" class="loading" style="margin-top:8px"></p>
     </div>
 
     <div class="card">
       <h3>🔊 Cara Soal Ditampilkan</h3>
+
       <div class="opsi-grup">
-        <button class="opsi aktif" id="opsi-soal-suara" onclick="pilihOpsi('soal','suara')">🔊 Dibacakan</button>
-        <button class="opsi" id="opsi-soal-teks" onclick="pilihOpsi('soal','teks')">📄 Teks Saja</button>
+        <button class="opsi aktif"
+          id="opsi-soal-suara"
+          onclick="pilihOpsi('soal','suara')">
+
+          🔊 Dibacakan
+        </button>
+
+        <button class="opsi"
+          id="opsi-soal-teks"
+          onclick="pilihOpsi('soal','teks')">
+
+          📄 Teks Saja
+        </button>
       </div>
     </div>
 
     <div class="card">
       <h3>🎙️ Cara Menjawab</h3>
+
       <div class="opsi-grup">
-        <button class="opsi aktif-hijau aktif" id="opsi-jawab-suara" onclick="pilihOpsi('jawab','suara')">🎙️ Suara</button>
-        <button class="opsi" id="opsi-jawab-ketik" onclick="pilihOpsi('jawab','ketik')">⌨️ Ketik</button>
-        <button class="opsi" id="opsi-jawab-pinyin" onclick="pilihOpsi('jawab','pinyin')">🀄 Pinyin</button>
+
+        <button class="opsi aktif-hijau aktif"
+          id="opsi-jawab-suara"
+          onclick="pilihOpsi('jawab','suara')">
+
+          🎙️ Suara
+        </button>
+
+        <button class="opsi"
+          id="opsi-jawab-ketik"
+          onclick="pilihOpsi('jawab','ketik')">
+
+          ⌨️ Ketik
+        </button>
+
+        <button class="opsi"
+          id="opsi-jawab-pinyin"
+          onclick="pilihOpsi('jawab','pinyin')">
+
+          🀄 Pinyin
+        </button>
+
       </div>
 
-      <div id="info-pinyin" class="info-box info-oren" style="display:none">
-        <b>Mode Pinyin:</b> Keyboard khusus dengan vokal bernada.
+      <div id="info-pinyin"
+        class="info-box info-oren"
+        style="display:none">
+
+        <b>Mode Pinyin:</b>
+        Keyboard khusus dengan vokal bernada.
       </div>
     </div>
 
     <div class="btn-row">
-      <button class="btn btn-hijau" onclick="mulaiKuis()">▶ Mulai Kuis</button>
-      <button class="btn btn-abu" onclick="showEditor()">✏️ Edit Soal Lokal</button>
+      <button class="btn btn-hijau" onclick="mulaiKuis()">
+        ▶ Mulai Kuis
+      </button>
+
+      <button class="btn btn-abu" onclick="showEditor()">
+        ✏️ Edit Soal Lokal
+      </button>
     </div>
   </div>
 
   <!-- ========== SCREEN KUIS ========== -->
   <div id="screen-kuis" style="display:none">
+
     <div class="card">
+
       <div class="progress-bar">
         <div class="progress-fill" id="progress"></div>
       </div>
 
       <div id="nomor-soal"></div>
+
       <div class="soal-box" id="soal"></div>
+
       <div class="hasil-box" id="hasil"></div>
+
       <div class="skor-box" id="skor"></div>
+
       <div class="streak-box" id="streak"></div>
 
-      <input type="text" class="input-jawab" id="inputJawab">
+      <input type="text"
+        class="input-jawab"
+        id="inputJawab">
 
       <div id="keyboard-pinyin"></div>
 
       <div class="btn-row">
-        <button class="btn btn-biru" id="btnJawab">🎤 Jawab</button>
-        <button class="btn btn-kuning" id="btnSkip" onclick="skipSoal()">⏭ Skip</button>
-        <button class="btn btn-merah" onclick="selesai()">⏹ Selesai</button>
+
+        <button class="btn btn-biru" id="btnJawab">
+          🎤 Jawab
+        </button>
+
+        <button class="btn btn-kuning"
+          id="btnSkip"
+          onclick="skipSoal()">
+
+          ⏭ Skip
+        </button>
+
+        <button class="btn btn-merah"
+          onclick="selesai()">
+
+          ⏹ Selesai
+        </button>
+
       </div>
     </div>
   </div>
 
   <!-- ========== SCREEN EDITOR ========== -->
   <div id="screen-editor" style="display:none">
+
     <div class="card">
+
       <h3>✏️ Edit Soal Lokal</h3>
 
       <textarea id="inputSoal" rows="12"></textarea>
 
       <div class="btn-row">
-        <button class="btn btn-hijau" onclick="simpanSoalLokal()">💾 Simpan</button>
-        <button class="btn btn-abu" onclick="showSetup()">← Kembali</button>
+
+        <button class="btn btn-hijau"
+          onclick="simpanSoalLokal()">
+
+          💾 Simpan
+        </button>
+
+        <button class="btn btn-abu"
+          onclick="showSetup()">
+
+          ← Kembali
+        </button>
+
       </div>
 
       <p id="pesan-simpan"></p>
+
     </div>
   </div>
 
