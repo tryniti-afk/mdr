@@ -165,6 +165,7 @@ function tampilSoal() {
 
   const btnJawab   = document.getElementById("btnJawab");
   const btnSkip    = document.getElementById("btnSkip");
+  const btnUlangi = document.getElementById("btnUlangi");
   const inputJawab = document.getElementById("inputJawab");
   const kbEl       = document.getElementById("keyboard-pinyin");
 
@@ -172,6 +173,8 @@ function tampilSoal() {
   kbEl.style.display       = "none";
   btnJawab.style.display   = "inline-block";
   btnSkip.style.display    = "inline-block";
+  btnUlangi.style.display =
+  config.soal === "suara" ? "inline-block" : "none";
   btnJawab.disabled        = true;
   btnJawab.onclick         = dengarJawaban;
   btnJawab.innerText       = "🎤 Jawab";
