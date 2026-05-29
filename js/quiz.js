@@ -464,5 +464,5 @@ function selesai() {
   modeUlangiCallback = null;
   document.getElementById("screen-kuis").style.display  = "none";
   document.getElementById("screen-setup").style.display = "block";
-  document.getElementById("btnUlangi").style.display    = "none";
+  
 }
