@@ -52,6 +52,56 @@
       </div>
     </div>
 
+<div class="card">
+  <h3>🎮 Mode Permainan</h3>
+
+  <div class="opsi-grup">
+    <button 
+      class="opsi aktif-ungu aktif" 
+      id="opsi-mode-sekali"
+      onclick="pilihOpsi('mode','sekali')"
+    >
+      1× Sekali
+    </button>
+
+    <button 
+      class="opsi" 
+      id="opsi-mode-bebas"
+      onclick="pilihOpsi('mode','bebas')"
+    >
+      🔢 Putaran
+    </button>
+
+    <button 
+      class="opsi" 
+      id="opsi-mode-infinity"
+      onclick="pilihOpsi('mode','infinity')"
+    >
+      ♾ Infinity
+    </button>
+  </div>
+
+  <div id="input-putaran" style="display:none; margin-top:10px;">
+    <input 
+      type="number" 
+      id="jmlPutaran" 
+      min="1" 
+      value="3"
+      class="input-jawab"
+      placeholder="Jumlah putaran"
+    >
+  </div>
+
+  <div 
+    id="info-infinity" 
+    class="info-box info-ungu" 
+    style="display:none"
+  >
+    <b>Infinity Mode:</b> 
+    Jika salah harus mengulang sampai benar.
+  </div>
+</div>
+    
     <div class="card">
       <h3>🎙️ Cara Menjawab</h3>
 
