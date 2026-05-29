@@ -458,7 +458,7 @@ function tampilSelesai() {
 function updateSkor() {
   document.getElementById("skor").innerText = `✅ Benar: ${state.skor}  ❌ Salah: ${state.salah}`;
 }
-
+ 
 function selesai() {
   speechSynthesis.cancel();
   modeUlangiCallback = null;
