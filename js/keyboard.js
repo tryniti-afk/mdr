@@ -6,8 +6,8 @@ const VOKAL_NADA = {
   u: ["u","ū","ú","ǔ","ù"],
   ü: ["ü","ǖ","ǘ","ǚ","ǜ"],
 };
-const KONSONAN = ["b","p","m","f","d","t","n","l","g","k","h","j","q","x","zh","ch","sh","r","z","c","s","w","y"];
-const SUKU_AKHIR = ["ang","eng","ing","ong","an","en","in","un","ün","ai","ei","ao","ou","ia","ie","ua","uo","ui","iu"];
+const KONSONAN = ["b","p","m","f","d","t","n","l","g","k","h","j","q","x","r","z","c","s","w","y"];
+
 
 let nadaAktif = 0;
 let kbTeks    = "";
