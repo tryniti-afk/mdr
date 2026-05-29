@@ -185,7 +185,42 @@
         class="input-jawab"
         id="inputJawab">
 
-      <div id="keyboard-pinyin"></div>
+      <div id="keyboard-pinyin" style="display:none">
+
+  <div id="kb-display" class="kb-display">&#8203;</div>
+
+  <div class="kb-section">
+    <div class="kb-label">Nada</div>
+
+    <button class="kb-btn nada" id="nada-0" onclick="pilihNada(0)">◌</button>
+    <button class="kb-btn nada" id="nada-1" onclick="pilihNada(1)">¯</button>
+    <button class="kb-btn nada" id="nada-2" onclick="pilihNada(2)">´</button>
+    <button class="kb-btn nada" id="nada-3" onclick="pilihNada(3)">ˇ</button>
+    <button class="kb-btn nada" id="nada-4" onclick="pilihNada(4)">`</button>
+  </div>
+
+  <div class="kb-section">
+    <div class="kb-label">Vokal</div>
+    <div id="kb-vokal"></div>
+  </div>
+
+  <div class="kb-section">
+    <div class="kb-label">Konsonan</div>
+    <div id="kb-konsonan"></div>
+  </div>
+
+  <div class="kb-section">
+    <div class="kb-label">Akhiran</div>
+    <div id="kb-khusus"></div>
+  </div>
+
+  <div class="kb-section">
+    <button class="kb-btn spesial" onclick="kbSpasi()">Spasi</button>
+    <button class="kb-btn spesial" onclick="kbHapus()">⌫ Hapus</button>
+    <button class="kb-btn spesial kb-submit">✅ Submit</button>
+  </div>
+
+</div>
 
       <div class="btn-row">
 
