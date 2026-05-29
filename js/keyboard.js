@@ -77,4 +77,4 @@ function buildKeyboard() {
   document.getElementById("nada-0").classList.add("nada-aktif");
 }
 
-buildKeyboard();
+;
