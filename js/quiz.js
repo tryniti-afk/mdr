@@ -249,7 +249,7 @@ function skipSoal() {
   document.getElementById("streak").innerText = state.streak > 1 ? `🔥 Streak: ${state.streak}` : "";
   document.getElementById("btnSkip").style.display  = "none";
   document.getElementById("btnJawab").disabled      = true;
-  document.getElementById("btnUlangi").style.display = "none";
+  
   updateSkor();
 
   setTimeout(() => lanjut(), 1800);
@@ -364,7 +364,7 @@ function prosesJawaban(jawaban) {
 
     if (config.mode === "infinity") {
       state.ulangiSoal = state.nomor;
-      document.getElementById("btnUlangi").style.display = "inline-block";
+      
       setTimeout(() => {
         document.getElementById("hasil").innerText += "\n\n🔄 Jawab ulang soal ini dulu...";
         setTimeout(() => tampilUlangi(), 1500);
@@ -405,7 +405,7 @@ function tampilUlangi() {
 
       state.ulangiSoal = -1;
       modeUlangiCallback = null;
-      document.getElementById("btnUlangi").style.display = "none";
+      
       setTimeout(() => { state.nomor = 0; state.streak = 0; tampilSoal(); }, 1800);
 
     } else {
