@@ -1,4 +1,7 @@
   <style>
+* {
+  box-sizing: border-box;
+}
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: Arial, sans-serif; background: #f0f4f8; min-height: 100vh; display: flex; align-items: flex-start; justify-content: center; padding: 30px 16px; }
     .wrap { width: 100%; max-width: 640px; }
@@ -34,7 +37,16 @@
     .btn-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
     textarea { width: 100%; padding: 10px; font-size: 14px; border-radius: 8px; border: 1.5px solid #ddd; resize: vertical; font-family: Arial; }
     textarea:focus { outline: none; border-color: #2196F3; }
-    .input-jawab { width: 100%; padding: 10px; font-size: 18px; border-radius: 8px; border: 2px solid #2196F3; margin-top: 10px; }
+   .input-jawab {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: 2px solid #2196F3;
+  margin-top: 10px;
+ }
     .input-jawab:focus { outline: none; border-color: #1565C0; }
     .info-box { padding: 10px 14px; border-radius: 8px; font-size: 13px; margin-top: 12px; }
     .info-kuning { background: #fff8e1; border-left: 4px solid #FFC107; color: #5d4037; }
